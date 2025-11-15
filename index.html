@@ -1,19 +1,39 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soeparno-Cloud</title>
+  <title>Mini Drive - Gibson</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Soeparno Cloud</h1>
-    <div id="breadcrumb">/</div>
-  </header>  <main>
-    <div id="file-list" class="grid"></div>
-    <div class="upload-section">
-      <input type="file" id="file-input">
-      <button id="upload-btn">Upload</button>
-    </div>
-  </main>  <script src="config.js"></script>  <script src="app.js"></script></body>
+
+  <!-- Login Form -->
+  <div id="login-form">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="login-btn">Login</button>
+  </div>
+
+  <!-- Main Drive UI -->
+  <div id="drive-ui" style="display:none;">
+    <header>
+      <h1>Mini Drive</h1>
+      <div id="breadcrumb">/</div>
+      <button id="logout-btn">Logout</button>
+    </header>
+    <main>
+      <div id="file-list" class="grid"></div>
+      <div class="upload-section">
+        <input type="file" id="file-input">
+        <button id="upload-btn">Upload</button>
+        <button id="create-folder-btn">Create Folder</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
